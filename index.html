@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bitigey WebOS — Tunahan Haksever | Web Tabanlı Siber Masaüstü İşletim Sistemi</title>
+  <meta name="description" content="Tunahan Haksever tarafından geliştirilen Bitigey WebOS; tarayıcıda çalışan macOS ve Cyberpunk hibriti pencere yöneticisi, müzik çalar, terminal, not defteri ve retro arcade oyunları içeren yeni nesil Web İşletim Sistemidir.">
+  <meta name="keywords" content="Tunahan Haksever, Tunahan Haksever kimdir, Bitigey, Bitigey WebOS, Bitigey.com, Mâsivâ Yolculuğu, Kög Dergisi, WebOS, Web İşletim Sistemi, Cloud Desktop, Cyberpunk OS, Javascript OS, Window Manager">
+  <meta name="author" content="Tunahan Haksever">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tunahanhaksever.github.io/bitigey-webos/">
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tunahanhaksever.github.io/bitigey-webos/">
+  <meta property="og:title" content="Bitigey WebOS — Tunahan Haksever | Web Tabanlı Siber Masaüstü">
+  <meta property="og:description" content="Tunahan Haksever tarafından geliştirilen tarayıcı tabanlı modern WebOS. Pencere yöneticisi, synthwave müzik çalar, terminal, oyunlar ve widget'lar.">
+  <meta property="og:site_name" content="Bitigey WebOS">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://tunahanhaksever.github.io/bitigey-webos/">
+  <meta name="twitter:title" content="Bitigey WebOS — Tunahan Haksever">
+  <meta name="twitter:description" content="Tunahan Haksever imzalı modern Web İşletim Sistemi.">
+
+  <!-- Google Knowledge Graph / Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://github.com/tunahanhaksever#person",
+        "name": "Tunahan Haksever",
+        "birthDate": "2005-08-07",
+        "birthPlace": {
+          "@type": "Place",
+          "name": "İstanbul, Türkiye"
+        },
+        "jobTitle": "Şair, Yazar, Editör & Yazılım Geliştirici",
+        "alumniOf": "Karadeniz Teknik Üniversitesi",
+        "url": "https://github.com/tunahanhaksever",
+        "sameAs": [
+          "https://github.com/tunahanhaksever",
+          "https://bitigey.com"
+        ],
+        "description": "Tunahan Haksever (d. 7 Ağustos 2005, İstanbul), Türk şair, yazar, editör ve Bitigey.com dijital edebiyat platformunun kurucusudur. Mâsivâ Yolculuğu ve Ekinoksu Beklemek kitaplarının yazarıdır."
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://tunahanhaksever.github.io/bitigey-webos/#app",
+        "name": "Bitigey WebOS",
+        "url": "https://tunahanhaksever.github.io/bitigey-webos/",
+        "applicationCategory": "OperatingSystemApplication",
+        "operatingSystem": "All, Web Browser",
+        "author": {
+          "@id": "https://github.com/tunahanhaksever#person"
+        },
+        "description": "Tunahan Haksever tarafından geliştirilmiş, pencere yöneticisi, müzik çalar, terminal, oyunlar ve widget'lar içeren açık kaynak WebOS."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="./src/styles/main.css">
+
+  <!-- Global CDN Scripts for Zero-Config Standalone & Live Server Support -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div id="desktop" class="desktop-screen wallpaper-cyberpunk">
+    <!-- Top System Menu Bar -->
+    <header class="top-system-bar" id="top-bar">
+      <div class="top-bar-left">
+        <button class="sys-btn apple-bitigey-logo" id="btn-system-menu" title="Bitigey Menüsü">
+          <svg viewBox="0 0 32 32" width="16" height="16" fill="none">
+            <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="16" cy="16" r="3" fill="#ff007f"/>
+          </svg>
+          <span class="sys-brand-title">BitigeyOS</span>
+        </button>
+
+        <nav class="app-menu-strip" id="active-app-menu">
+          <button class="sys-menu-item active-app-name" id="menu-current-app">Masaüstü</button>
+          <button class="sys-menu-item">Dosya</button>
+          <button class="sys-menu-item">Düzenle</button>
+          <button class="sys-menu-item">Görünüm</button>
+          <button class="sys-menu-item">Pencere</button>
+          <button class="sys-menu-item">Yardım</button>
+        </nav>
+      </div>
+
+      <div class="top-bar-right">
+        <!-- Live Mini Status Indicators -->
+        <div class="status-pill" id="btn-toggle-music-pill" title="Müzik Çalar">
+          <span class="music-note-icon">🎵</span>
+          <span class="music-title-marquee" id="top-music-title">Synthwave Radio</span>
+        </div>
+
+        <button class="icon-sys-btn" id="btn-toggle-theme" title="Siberpunk / Karanlık / Aydınlık Mod">
+          <i data-lucide="palette"></i>
+        </button>
+
+        <button class="icon-sys-btn" id="btn-open-control-center" title="Kontrol Merkezi">
+          <i data-lucide="sliders-horizontal"></i>
+        </button>
+
+        <div class="clock-display" id="btn-toggle-calendar" title="Tarih & Takvim">
+          <span id="top-date-text">21 Ağu Cuma</span>
+          <span id="top-clock-text">13:30</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Desktop Icons & Interactive Widgets Area -->
+    <main class="desktop-workspace" id="desktop-workspace">
+      <!-- Desktop App Shortcuts Grid -->
+      <div class="desktop-grid" id="desktop-icons-container">
+        <!-- Rendered by Desktop.js -->
+      </div>
+
+      <!-- Desktop Floating Live Widgets -->
+      <div class="desktop-widgets-layer" id="widgets-container">
+        <!-- 1. Weather Widget -->
+        <div class="widget-card widget-weather glass-card" id="widget-weather-card">
+          <div class="widget-header">
+            <span class="widget-city">İstanbul / Trabzon</span>
+            <span class="widget-badge live">Canlı</span>
+          </div>
+          <div class="weather-main">
+            <div class="weather-temp">26°C</div>
+            <div class="weather-icon-box">☀️</div>
+          </div>
+          <div class="weather-desc">Açık, Ferah Edebi İlham Rüzgarları</div>
+          <div class="weather-forecast">
+            <span>Yarın: 28°C ☀️</span>
+            <span>Paz: 25°C ⛅</span>
+          </div>
+        </div>
+
+        <!-- 2. System Monitor Widget -->
+        <div class="widget-card widget-sys-monitor glass-card" id="widget-sys-card">
+          <div class="widget-title">SİSTEM PERFORMANSI</div>
+          <div class="sys-stat-row">
+            <span class="stat-lbl">CPU (WebOS Çekirdek)</span>
+            <div class="stat-bar-track"><div class="stat-bar-fill cpu" id="sys-cpu-bar" style="width: 24%;"></div></div>
+            <span class="stat-val" id="sys-cpu-val">24%</span>
+          </div>
+          <div class="sys-stat-row">
+            <span class="stat-lbl">RAM Bellek (DOM VFS)</span>
+            <div class="stat-bar-track"><div class="stat-bar-fill ram" id="sys-ram-bar" style="width: 42%;"></div></div>
+            <span class="stat-val" id="sys-ram-val">4.2 GB</span>
+          </div>
+          <div class="sys-meta-info">
+            <span>Bitigey Core v2.5</span>
+            <span>Geliştirici: Tunahan Haksever</span>
+          </div>
+        </div>
+
+        <!-- 3. Tunahan Haksever Quote of the Day Widget -->
+        <div class="widget-card widget-quote glass-card" id="widget-quote-card">
+          <div class="quote-tag">GÜNÜN DİZESİ & EDEBİYAT</div>
+          <div class="quote-text" id="quote-text-content">"Kelimelerin gölgesinde hakikati arayan bir yolcu, mâsivâdan sıyrılıp kendi ekinoksuna varır."</div>
+          <div class="quote-author">— Tunahan Haksever (Mâsivâ Yolculuğu)</div>
+        </div>
+      </div>
+
+      <!-- Windows Layer -->
+      <div class="windows-container" id="windows-layer"></div>
+    </main>
+
+    <!-- Floating Dock Bar (MacOS Fisheye Magnification) -->
+    <footer class="dock-container">
+      <div class="dock-bar glass-dock" id="dock-bar">
+        <!-- Rendered by Dock.js -->
+      </div>
+    </footer>
+
+    <!-- Control Center Popup Panel -->
+    <div class="control-center-panel glass-modal" id="control-center-panel" style="display: none;">
+      <div class="cc-grid">
+        <div class="cc-tile active" id="tile-wifi">
+          <i data-lucide="wifi"></i>
+          <div>
+            <div class="cc-title">Wi-Fi</div>
+            <div class="cc-sub">Bitigey_Fiber_5G</div>
+          </div>
+        </div>
+        <div class="cc-tile active" id="tile-bluetooth">
+          <i data-lucide="bluetooth"></i>
+          <div>
+            <div class="cc-title">Bluetooth</div>
+            <div class="cc-sub">Açık</div>
+          </div>
+        </div>
+        <div class="cc-tile active" id="tile-dnd">
+          <i data-lucide="moon"></i>
+          <div>
+            <div class="cc-title">Odak Modu</div>
+            <div class="cc-sub">Edebiyat & Kod</div>
+          </div>
+        </div>
+        <div class="cc-tile" id="tile-cyberpunk">
+          <i data-lucide="sparkles"></i>
+          <div>
+            <div class="cc-title">Neon Parıltı</div>
+            <div class="cc-sub">Aktif</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sliders -->
+      <div class="cc-slider-box">
+        <div class="slider-label"><i data-lucide="sun"></i> <span>Ekran Parlaklığı</span></div>
+        <input type="range" min="30" max="100" value="95" class="cc-slider" id="slider-brightness">
+      </div>
+
+      <div class="cc-slider-box">
+        <div class="slider-label"><i data-lucide="volume-2"></i> <span>Ana Ses Düzeyi</span></div>
+        <input type="range" min="0" max="100" value="80" class="cc-slider" id="slider-volume">
+      </div>
+    </div>
+
+    <!-- Calendar Popup Panel -->
+    <div class="calendar-popup glass-modal" id="calendar-popup" style="display: none;">
+      <div class="cal-header">
+        <span class="cal-month-title" id="cal-month-name">Ağustos 2026</span>
+      </div>
+      <div class="cal-days-grid" id="cal-days-table"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

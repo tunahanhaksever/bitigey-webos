@@ -1,0 +1,123 @@
+/* Window Manager & Chrome Styling */
+.os-window {
+  position: absolute;
+  pointer-events: auto;
+  background: var(--bg-glass-heavy);
+  backdrop-filter: blur(30px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-window);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 220px;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s var(--ease-spring), opacity 0.2s;
+  z-index: 50;
+}
+
+.os-window.active {
+  box-shadow: var(--shadow-window-active);
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.os-window.minimized {
+  opacity: 0;
+  transform: translateY(80px) scale(0.6) !important;
+  pointer-events: none;
+}
+
+.os-window.maximized {
+  top: var(--topbar-height) !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: calc(100vh - var(--topbar-height) - var(--dock-height) - 16px) !important;
+  border-radius: 0 !important;
+}
+
+/* Window Title Bar */
+.window-titlebar {
+  height: 36px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: move;
+}
+
+.window-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.traffic-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s;
+}
+
+.traffic-btn.btn-close { background-color: var(--btn-close); }
+.traffic-btn.btn-min { background-color: var(--btn-minimize); }
+.traffic-btn.btn-max { background-color: var(--btn-maximize); }
+
+.window-traffic-lights:hover .traffic-btn::after {
+  content: '✕';
+}
+.window-traffic-lights:hover .traffic-btn.btn-min::after {
+  content: '–';
+}
+.window-traffic-lights:hover .traffic-btn.btn-max::after {
+  content: '+';
+}
+
+.traffic-btn:hover {
+  transform: scale(1.15);
+}
+
+.window-title-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.window-controls-right {
+  width: 50px;
+}
+
+/* Window Content Body */
+.window-body {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(10, 12, 22, 0.6);
+}
+
+/* Resize Handles */
+.resize-handle {
+  position: absolute;
+  z-index: 10;
+}
+
+.resize-handle.n { top: 0; left: 0; right: 0; height: 6px; cursor: n-resize; }
+.resize-handle.s { bottom: 0; left: 0; right: 0; height: 6px; cursor: s-resize; }
+.resize-handle.w { top: 0; bottom: 0; left: 0; width: 6px; cursor: w-resize; }
+.resize-handle.e { top: 0; bottom: 0; right: 0; width: 6px; cursor: e-resize; }
+.resize-handle.nw { top: 0; left: 0; width: 10px; height: 10px; cursor: nw-resize; }
+.resize-handle.ne { top: 0; right: 0; width: 10px; height: 10px; cursor: ne-resize; }
+.resize-handle.sw { bottom: 0; left: 0; width: 10px; height: 10px; cursor: sw-resize; }
+.resize-handle.se { bottom: 0; right: 0; width: 10px; height: 10px; cursor: se-resize; }

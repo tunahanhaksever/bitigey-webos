@@ -1,0 +1,29 @@
+{
+  "name": "bitigey-webos",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tunahan Haksever tarafından geliştirilen, tarayıcıda çalışan macOS ve Cyberpunk hibriti modern Web İşletim Sistemi",
+  "author": "Tunahan Haksever <tunahanhaksever@users.noreply.github.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide": "^0.475.0"
+  },
+  "devDependencies": {
+    "vite": "^6.1.1"
+  },
+  "keywords": [
+    "webos",
+    "cloud-desktop",
+    "tunahan-haksever",
+    "bitigey",
+    "cyberpunk-os",
+    "macos-web",
+    "window-manager"
+  ]
+}

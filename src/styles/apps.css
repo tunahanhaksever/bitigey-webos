@@ -1,0 +1,410 @@
+/* Built-in Apps Styling */
+
+/* Common App Layouts */
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 1. Terminal App */
+.terminal-app {
+  background: #060814;
+  color: #00f0ff;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 12px;
+  overflow-y: auto;
+  line-height: 1.5;
+  position: relative;
+}
+
+.terminal-canvas-matrix {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.terminal-log {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.terminal-row-input {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.term-prompt {
+  color: #ff007f;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.term-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+/* 2. Music Player App */
+.music-app {
+  background: linear-gradient(180deg, #130a24 0%, #090614 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  gap: 16px;
+}
+
+.cassette-visualizer {
+  width: 100%;
+  max-width: 380px;
+  height: 140px;
+  border-radius: 16px;
+  background: #1c1136;
+  border: 2px solid var(--accent-pink);
+  box-shadow: var(--shadow-neon-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cassette-visualizer canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.music-meta {
+  text-align: center;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: #fff;
+}
+
+.song-artist {
+  font-size: 12px;
+  color: var(--accent-cyan);
+}
+
+.music-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.music-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.music-btn:hover {
+  background: var(--accent-pink);
+  box-shadow: var(--shadow-neon-pink);
+  transform: scale(1.1);
+}
+
+.music-btn.play-btn {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+}
+
+/* 3. About Tunahan Haksever App */
+.about-app {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #0d1122;
+}
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+}
+
+.about-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.about-names h2 {
+  font-size: 22px;
+  font-family: var(--font-display);
+  color: #fff;
+}
+
+.about-title-badge {
+  font-size: 12px;
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.about-section-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.about-section-box h3 {
+  font-size: 14px;
+  color: var(--accent-pink);
+  margin-bottom: 8px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.book-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-glass);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+}
+
+.book-title {
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.book-type {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* 4. Notes App */
+.notes-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.notes-toolbar {
+  height: 38px;
+  border-bottom: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.notes-editor {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  resize: none;
+}
+
+/* 5. Paint App */
+.paint-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #111;
+}
+
+.paint-toolbar {
+  height: 42px;
+  background: #1e1e2f;
+  border-bottom: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-dot.active {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.paint-canvas-wrapper {
+  flex: 1;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.paint-canvas-wrapper canvas {
+  cursor: crosshair;
+}
+
+/* 6. Calculator App */
+.calc-app {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #0f1322;
+  height: 100%;
+}
+
+.calc-display {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: right;
+  font-size: 26px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  min-height: 56px;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  flex: 1;
+}
+
+.calc-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.calc-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.calc-btn.op {
+  background: var(--accent-pink);
+  color: #fff;
+}
+
+.calc-btn.action {
+  background: var(--accent-cyan);
+  color: #090a16;
+}
+
+/* 7. Arcade Game App */
+.game-app {
+  background: #05060f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 12px;
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent-cyan);
+}
+
+.game-canvas-box {
+  border: 2px solid var(--accent-pink);
+  border-radius: 8px;
+  box-shadow: var(--shadow-neon-pink);
+  background: #000;
+}
+
+/* 8. Settings App */
+.settings-app {
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.wallpaper-card {
+  height: 80px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-glass);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px #000;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.wallpaper-card:hover {
+  border-color: var(--accent-cyan);
+  transform: scale(1.04);
+}

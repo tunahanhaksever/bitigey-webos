@@ -1,0 +1,7 @@
+@import './variables.css';
+@import './desktop.css';
+@import './topbar.css';
+@import './dock.css';
+@import './window.css';
+@import './widgets.css';
+@import './apps.css';
