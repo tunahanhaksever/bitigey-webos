@@ -1,4 +1,3 @@
-import './styles/main.css';
 import { events } from './core/events.js';
 import { wm } from './core/WindowManager.js';
 import { allApps, getAppById } from './apps/index.js';
@@ -59,4 +58,8 @@ function bootstrapWebOS() {
   console.log('✅ Bitigey WebOS hazır.');
 }
 
-window.addEventListener('DOMContentLoaded', bootstrapWebOS);
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', bootstrapWebOS);
+} else {
+  bootstrapWebOS();
+}
