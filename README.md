@@ -1,87 +1,87 @@
-# 🌌 Bitigey WebOS — Next-Gen Cyberpunk Web Operating System
+# 🌌 Bitigey WebOS — In-Browser Cyberpunk Desktop Operating System
 
 <div align="center">
 
-![Bitigey WebOS Banner](https://img.shields.io/badge/Bitigey_WebOS-v2.5.0-00f0ff?style=for-the-badge&logo=apple&logoColor=white)
-![Author](https://img.shields.io/badge/Author-Tunahan_Haksever-ff007f?style=for-the-badge&logo=github&logoColor=white)
-![Live Demo](https://img.shields.io/badge/Live_Demo-Online-10b981?style=for-the-badge&logo=google-chrome&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-b967ff?style=for-the-badge)
+[![Author](https://img.shields.io/badge/Author-Tunahan_Haksever-8b5cf6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tunahanhaksever)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Launch_WebOS-00f0ff?style=for-the-badge&logo=apple&logoColor=black)](https://tunahanhaksever.github.io/bitigey-webos/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-b967ff?style=for-the-badge)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/tunahanhaksever/bitigey-webos?style=for-the-badge&color=gold)](https://github.com/tunahanhaksever/bitigey-webos/stargazers)
+[![Tech: Pure JS/CSS](https://img.shields.io/badge/Tech-Vanilla_JS_%2B_CSS3_Glassmorphism-ff007f?style=for-the-badge&logo=javascript&logoColor=white)](https://tunahanhaksever.github.io/bitigey-webos/)
 
-**Tunahan Haksever tarafından geliştirilen, tarayıcıda çalışan macOS ve Cyberpunk hibriti pencere yöneticisi, synthwave müzik çalar, matrix terminal, edebi not defteri ve retro arcade oyunları içeren yeni nesil Web İşletim Sistemi.**
+**A high-performance, aesthetic Web Operating System running entirely in your browser. Features a macOS-style magnifying dock, draggable glassmorphic window manager, synthwave audio synthesizer, Matrix digital rain terminal, markdown notebook, canvas paint studio, retro arcade shooter, and live desktop widgets.**
 
-[Canlı Demo](#-canlı-demo) • [Özellikler](#-özellikler) • [Dahili Uygulamalar](#-dahili-webos-uygulamaları) • [Tunahan Haksever Kimdir?](#-tunahan-haksever-kimdir--bitigey-hakkında) • [Kurulum](#-kurulum)
+[🚀 Open Live WebOS](https://tunahanhaksever.github.io/bitigey-webos/) • [✨ Features](#-key-features) • [📦 Built-in Apps](#-built-in-webos-apps) • [🚀 Quick Start](#-quick-start) • [🇹🇷 Türkçe Açıklama](#-türkçe-açıklama--tunahan-haksever)
 
 </div>
 
 ---
 
-## 🌐 Canlı Demo
-Bitigey WebOS'u doğrudan tarayıcınızda deneyimleyin:  
-👉 **[https://tunahanhaksever.github.io/bitigey-webos/](https://tunahanhaksever.github.io/bitigey-webos/)**
+## 🌟 Key Features
+
+- 🖥️ **Full Window Manager:** Draggable, resizable, minimizable, maximizable, and z-index layered glassmorphism windows.
+- 🍏 **MacOS-Style Fisheye Dock:** Smooth exponential magnification curve on cursor hover with active bouncing indicators.
+- 🎵 **Synthwave & Lo-Fi Audio Studio:** Real-time Web Audio API frequency visualizer and canvas audio spectrum equalizer.
+- 📟 **Matrix Rain Terminal:** Digital streaming rain animation with full Unix-like command shell (`whoami`, `neofetch`, `poetry`, `books`, `calc`, `help`).
+- 📝 **Markdown Literary Notepad:** Auto-saving local storage note editor with 1-click `.md` export.
+- 🎨 **Canvas Drawing & Paint Studio:** Multi-color palette, dynamic brush sizes, eraser, and instant PNG export.
+- 🎮 **Retro Cyber Arcade:** Built-in neon 2D Space Shooter canvas mini-game with score tracking.
+- 🌦️ **Interactive Desktop Widgets:** Real-time clock, CPU/RAM simulation monitor, weather widget, and daily quotes.
 
 ---
 
-## 🌟 Öne Çıkan Özellikler
+## 📦 Built-in WebOS Apps
 
-- 🖥️ **Gelişmiş Pencere Yöneticisi (Window Manager):** Sürüklenebilir, yeniden boyutlandırılabilir, minimize/maximize edilebilir ve z-index odaklı cam morfik pencereler.
-- 🚀 **Büyüteçli Dock Bar (MacOS Fisheye Hover Effect):** Fare yaklaştıkça akıcı şekilde büyüyen, zıplayan ve aktif çalışma noktaları gösteren dinamik dock.
-- 🎵 **Synthwave & Lo-Fi Müzik Stüdyosu:** Web Audio API sentezleyicisi ve frekans spektrumunu gerçek zamanlı çizen Canvas ekolayzır.
-- 📟 **Matrix Rain Destekli Terminal:** Matrix dijital yağmuru, `whoami`, `neofetch`, `poetry`, `books`, `cowsay`, `calc` komutları.
-- 📝 **Edebi Markdown Not Defteri:** Otomatik yerel kaydetme ve tek tıkla `.md` dışa aktarma.
-- 🎨 **Canvas Çizim Stüdyosu:** Renk paleti, fırça boyutları, silgi ve PNG indirme.
-- 🎮 **Retro Cyber Arcade:** Neon 2D Space Shooter mini oyunu.
-- 🌦️ **Masaüstü Widget'ları:** Canlı hava durumu, gerçek zamanlı CPU/RAM sistem monitörü ve Tunahan Haksever dize kartı.
-
----
-
-## 📦 Dahili WebOS Uygulamaları
-
-| Uygulama | Simge | Açıklama |
+| Application | Icon | Description |
 | :--- | :---: | :--- |
-| **Tunahan Haksever Portföyü** | 👤 | Şair, yazar ve yazılımcı biyografisi, yayınlanmış kitaplar (*Mâsivâ Yolculuğu*, *Ekinoksu Beklemek*). |
-| **Bitigey Synthwave Radio** | 🎵 | Canlı Web Audio API müzik çaları & ses dalga görselleştiricisi. |
-| **Bitigey Terminal** | 📟 | Matrix dijital yağmur akışı ve zengin Unix shell komutları. |
-| **Edebi Not Defteri** | 📝 | Şiir, deneme ve düşünceler için Markdown editörü. |
-| **Canvas Paint** | 🎨 | Çizim ve eskiz aracı (PNG indirme destekli). |
-| **Hesap Makinesi** | 🧮 | Bilimsel işlem geçmişli cam morfik hesap makinesi. |
-| **Web Tarayıcı** | 🌐 | URL çubuğu ve sık kullanılanlar içeren mini browser. |
-| **Finder** | 📁 | Hiyerarşik sanal dosya ve belge yöneticisi. |
-| **Cyber Arcade** | 🎮 | 2D Neon Space Shooter retro oyunu. |
-| **Sistem Tercihleri** | ⚙️ | 4+ siberpunk ve aurora duvar kağıdı, tema kontrolleri. |
+| **Developer & Author Portfolio** | 👤 | Interactive biography, published books, and project showcase. |
+| **Bitigey Synthwave Radio** | 🎵 | Procedural Web Audio synthesizer and live spectrum equalizer. |
+| **Bitigey Terminal** | 📟 | Matrix rain terminal with interactive shell utilities. |
+| **Literary Notepad** | 📝 | Markdown editor with local auto-persistence and file downloads. |
+| **Canvas Paint** | 🎨 | Drawing canvas with color picker, stroke adjustment & PNG save. |
+| **Scientific Calculator** | 🧮 | Glassmorphic calculator with calculation history log. |
+| **Mini Web Browser** | 🌐 | Embedded sandbox browser with navigation and bookmarks. |
+| **Finder / File Explorer** | 📁 | Hierarchical virtual file explorer for desktop documents. |
+| **Cyber Arcade Game** | 🎮 | 2D Neon Space Shooter retro arcade game. |
+| **System Preferences** | ⚙️ | Cyberpunk / Aurora wallpapers, blur controls, and theme engine. |
 
 ---
 
-## 👨‍💻 Tunahan Haksever Kimdir? & Bitigey Hakkında
+## 🚀 Quick Start
 
-**Tunahan Haksever** (d. 7 Ağustos 2005, İstanbul), Türk şair, yazar, editör ve **Bitigey.com** dijital edebiyat platformunun kurucusudur. Karadeniz Teknik Üniversitesi Türk Dili ve Edebiyatı bölümünde eğitimine devam etmektedir.
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+)
 
-### 📚 Yayınlanmış Eserleri & Yayıncılık Faaliyetleri:
-- 📖 **Mâsivâ Yolculuğu** *(Şiir Kitabı — Tunahan Haksever)*
-- 🌙 **Ekinoksu Beklemek** *(Şiir Kitabı — Tunahan Haksever)*
-- 🗞️ **Kög Dergisi** *(Kurucu & Genel Yayın Yönetmeni)*
-- 🎯 **Odak Noktası Dergisi** *(Kurucu Editör)*
-- 🌐 **Bitigey.com** *(Bağımsız Dijital Edebiyat & Yayıncılık Platformu)*
-
----
-
-## 🚀 Yerel Kurulum
+### Run Locally
 
 ```bash
-# 1. Projeyi klonlayın
+# 1. Clone the repository
 git clone https://github.com/tunahanhaksever/bitigey-webos.git
 
-# 2. Proje dizinine gidin
+# 2. Enter directory
 cd bitigey-webos
 
-# 3. Bağımlılıkları yükleyin
+# 3. Install dependencies
 npm install
 
-# 4. Geliştirici sunucusunu başlatın
+# 4. Run Vite dev server
 npm run dev
 ```
 
+Open `http://localhost:5173` in your browser.
+
 ---
 
-## 📄 Lisans
+## 🇹🇷 Türkçe Açıklama & Tunahan Haksever
 
-Bu proje [MIT Lisansı](LICENSE) altında korunmaktadır. Copyright (c) 2026 Tunahan Haksever.
+**Bitigey WebOS**, modern web teknolojileri (HTML5, CSS3 Glassmorphism, Vanilla ES6 JavaScript ve Web Audio API) kullanılarak sıfırdan geliştirilmiş, hiçbir harici kütüphane bağımlılığı olmadan çalışan **yeni nesil tarayıcı tabanlı işletim sistemidir**.
+
+### 👨‍💻 Tunahan Haksever Hakkında
+- **Yazar, Şair ve Yazılımcı:** [@tunahanhaksever](https://github.com/tunahanhaksever)
+- **Eserleri:** *Mâsivâ Yolculuğu*, *Ekinoksu Beklemek*
+- **Platform:** [bitigey.com](https://bitigey.com)
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE). Copyright (c) 2026 Tunahan Haksever.
