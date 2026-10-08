@@ -1,0 +1,28 @@
+name: Welcome New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome New Contributor
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 **Bitigey WebOS** projesine katkın ve geri bildirimin için teşekkürler!
+            
+            Geri bildirimin kaydedildi. En kısa sürede inceleyeceğiz. Projeyi beğendiysen yıldız (⭐) vermeyi unutma! 🚀
+          pr-message: |
+            🎉 **Tebrikler ve hoş geldin!** Bitigey WebOS projesine ilk Pull Request'ini açtığın için teşekkür ederiz!
+            
+            Otomatik testler çalıştırılacak ve katkın en kısa sürede incelenecektir. İyi ki varsın! 🚀
